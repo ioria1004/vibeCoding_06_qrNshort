@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL 단축기</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <a href="../index.html" class="back">← 뒤로가기</a>
+
+    <h1>URL 단축기</h1>
+    <p class="desc">긴 URL을 짧고 간편하게 만드세요</p>
+
+    <!-- URL 입력 + 단축하기 -->
+    <div class="row">
+      <input type="url" id="url-input" placeholder="단축할 URL을 입력하세요 (https://...)" autocomplete="off">
+      <button type="button" id="shorten-btn" disabled>단축하기</button>
+    </div>
+
+    <!-- 결과 (읽기 전용) + 복사 -->
+    <div class="row result" id="result-row">
+      <input type="text" id="short-output" readonly placeholder="단축된 URL이 여기에 표시됩니다">
+      <button type="button" id="copy-btn" class="copy">복사</button>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <div id="toast" class="toast">복사하였습니다</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

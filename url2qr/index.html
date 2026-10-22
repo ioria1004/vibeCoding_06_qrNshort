@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR 코드 생성기</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 화면 상단 좌측 로고 -->
+  <header class="top">
+    <img src="img/logo.png" alt="URL2QR" class="logo">
+  </header>
+  <a href="../index.html" class="back">← 뒤로가기</a>
+
+  <main>
+    <!-- QR코드가 생성되면 정중앙에 표시 -->
+    <section id="qr-area" class="qr-area hidden">
+      <div class="qr-card">
+        <div id="qrcode" title="클릭하면 JPG로 저장됩니다"></div>
+        <p class="hint">QR코드를 클릭하면 JPG로 다운로드됩니다</p>
+      </div>
+    </section>
+
+    <!-- URL 입력창 (생성 후에는 아래로 내려감) -->
+    <section id="input-area" class="input-area center">
+      <div class="input-card">
+        <input type="url" id="url-input" placeholder="웹사이트 URL을 입력하세요..." autocomplete="off">
+        <button type="button" id="make-btn">생성하기</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
